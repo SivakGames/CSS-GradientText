@@ -1,0 +1,99 @@
+:root
+{
+/* Main text */
+	--grad1Dark: #66C;
+    --grad1Mid: #AAE;
+    --grad1Light: #DDD;
+	--grad1Lightest: #DDD;
+/* Numbers */
+    --grad2Dark: #D60;
+    --grad2Mid: #D96;
+    --grad2Light: #DD0;
+	--grad2Lightest: #DDD;
+/* Leading zeros */
+	--grad3Dark: #620;
+    --grad3Mid: #800;
+    --grad3Light: #A62;
+	--grad3Lightest: #D60;
+}
+
+html
+{
+	font-size: 62.5%;
+}
+
+body
+{ 
+	margin: 0;
+	padding: 0;
+}
+
+main
+{	
+	min-height: 100vh;
+	background-color: #404;
+	padding: 1rem;
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+em
+{
+	font-style: inherit;
+}
+
+p
+{
+	color: rgba(0,0,0,0);
+	font-size: 3.2rem;
+	line-height: 1.5em;
+	
+	font-weight: bold;
+	font-style: normal;
+	margin: 0;
+	filter: drop-shadow(0.125em 0.125em black);
+}
+
+p:not(:last-child)
+{
+	margin-bottom: 2em;
+}
+
+.gradient-text
+{
+	--gradDark: var(--grad1Dark);
+	--gradMid: var(--grad1Mid);
+	--gradLight: var(--grad1Light);
+	--gradLightest: var(--grad1Lightest);
+
+	background-image: repeating-linear-gradient(to bottom, 
+		var(--gradDark), 
+		var(--gradDark) 12.5%,
+		var(--gradMid) 25%,
+		var(--gradLight) 37.5%, 
+		var(--gradLightest) 50%, 
+		var(--gradLight) 62.5%, 
+		var(--gradMid) 75%, 
+		var(--gradDark) 87.5%,
+		var(--gradDark) );
+	background-clip: text;
+	background-size: auto 1.25em;
+	background-position: center top;
+	line-height: 1.25em;
+	display: inline-block;
+}
+
+.gradient-text.alt
+{
+	--gradDark: var(--grad2Dark);
+	--gradMid: var(--grad2Mid);
+	--gradLight: var(--grad2Light);
+	--gradLightest: var(--grad2Lightest);
+}
+.gradient-text.alt2
+{
+	--gradDark: var(--grad3Dark);
+	--gradMid: var(--grad3Mid);
+	--gradLight: var(--grad3Light);
+	--gradLightest: var(--grad3Lightest);
+}
