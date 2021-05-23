@@ -1,20 +1,23 @@
 :root
 {
 /* Main text */
-	--grad1Dark: #66C;
+	--grad1Darkest: #44A;
+    --grad1Dark: #66C;
     --grad1Mid: #AAE;
-    --grad1Light: #DDD;
-	--grad1Lightest: #DDD;
+    --grad1Light: #EEE;
+	--grad1Lightest: #EEE;
 /* Numbers */
-    --grad2Dark: #D60;
-    --grad2Mid: #D96;
-    --grad2Light: #DD0;
-	--grad2Lightest: #DDD;
+    --grad2Darkest: #E60;
+    --grad2Dark: #E80;
+    --grad2Mid: #EA6;
+    --grad2Light: #EE0;
+	--grad2Lightest: #EEE;
 /* Leading zeros */
-	--grad3Dark: #620;
+	--grad3Darkest: #410;
+    --grad3Dark: #620;
     --grad3Mid: #800;
     --grad3Light: #A62;
-	--grad3Lightest: #D60;
+	--grad3Lightest: #E80;
 }
 
 html
@@ -34,7 +37,9 @@ main
 	background-color: #404;
 	padding: 1rem;
 	box-sizing: border-box;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-family: "Streets of Rage 2", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: White;
 }
 
 em
@@ -42,16 +47,25 @@ em
 	font-style: inherit;
 }
 
+h1
+{
+	margin: 0 0 1em;
+    font-size: 2em;
+    line-height: 2em;
+    filter: drop-shadow(0.125em 0.125em black);
+    
+}
+
 p
 {
 	color: rgba(0,0,0,0);
-	font-size: 3.2rem;
-	line-height: 1.5em;
+	font-size: 16px;
+	line-height: 1em;
 	
-	font-weight: bold;
 	font-style: normal;
 	margin: 0;
-	filter: drop-shadow(0.125em 0.125em black);
+    filter: drop-shadow(0.125em 0.125em black);
+
 }
 
 p:not(:last-child)
@@ -61,39 +75,116 @@ p:not(:last-child)
 
 .gradient-text
 {
-	--gradDark: var(--grad1Dark);
+	--gradDarkest: var(--grad1Darkest);
+    --gradDark: var(--grad1Dark);
 	--gradMid: var(--grad1Mid);
 	--gradLight: var(--grad1Light);
 	--gradLightest: var(--grad1Lightest);
 
+	--pixel1: var(--gradDarkest);
+	--pixel2: var(--gradDarkest);
+	--pixel3: var(--gradDark);
+	--pixel4: var(--gradDark);
+	--pixel5: var(--gradDark);
+	--pixel6: var(--gradMid);
+	--pixel7: var(--gradLight);
+	--pixel8: var(--gradLightest);
+	--pixel9: var(--gradLight);
+	--pixel10: var(--gradMid);
+	--pixel11: var(--gradDark);
+	--pixel12: var(--gradDarkest);
+	--pixel13: var(--gradDark);
+	--pixel14: var(--gradMid);
+	--pixel15: var(--gradLight);
+	--pixel16: var(--gradDarkest);
+
 	background-image: repeating-linear-gradient(to bottom, 
-		var(--gradDark), 
-		var(--gradDark) 12.5%,
-		var(--gradMid) 25%,
-		var(--gradLight) 37.5%, 
-		var(--gradLightest) 50%, 
-		var(--gradLight) 62.5%, 
-		var(--gradMid) 75%, 
-		var(--gradDark) 87.5%,
-		var(--gradDark) );
+	var(--pixel1) ,
+	var(--pixel1) 6.25%,
+	var(--pixel2) 6.25%,
+	var(--pixel2) 12.5%,
+	var(--pixel3) 12.5%,
+	var(--pixel3) 18.75%,
+	var(--pixel4) 18.75%,
+	var(--pixel4) 25%,
+	var(--pixel5) 25%,
+	var(--pixel5) 31.25%,
+	var(--pixel6) 31.25%, 
+	var(--pixel6) 37.5%, 
+	var(--pixel7) 37.5%, 
+	var(--pixel7) 43.75%, 
+	var(--pixel8) 43.75%, 
+	var(--pixel8) 50%, 
+	var(--pixel9) 50%,
+	var(--pixel9) 56.25%,
+	var(--pixel10) 56.25%, 
+	var(--pixel10) 62.5%, 
+	var(--pixel11) 62.5%,
+	var(--pixel11) 68.75%,
+	var(--pixel12) 68.75%,
+	var(--pixel12) 75%,
+	var(--pixel13) 75%,
+	var(--pixel13) 81.25%,
+	var(--pixel14) 81.25%,
+	var(--pixel14) 87.5%,
+	var(--pixel15) 87.5%,
+	var(--pixel15) 93.75%,
+	var(--pixel16) 93.75%,
+	var(--pixel16) 100%);
+	
 	background-clip: text;
-	background-size: auto 1.25em;
+	background-size: auto 2em;
 	background-position: center top;
-	line-height: 1.25em;
-	display: inline-block;
+	display: inline;
 }
 
 .gradient-text.alt
 {
-	--gradDark: var(--grad2Dark);
+	--gradDarkest: var(--grad2Darkest);
+    --gradDark: var(--grad2Dark);
 	--gradMid: var(--grad2Mid);
 	--gradLight: var(--grad2Light);
 	--gradLightest: var(--grad2Lightest);
+
+	--pixel1: var(--gradDarkest);
+	--pixel2: var(--gradDarkest);
+	--pixel3: var(--gradDark);
+	--pixel4: var(--gradDark);
+	--pixel5: var(--gradMid);
+	--pixel6: var(--gradLight);
+	--pixel7: var(--gradLightest);
+	--pixel8: var(--gradLightest);
+	--pixel9: var(--gradLight);
+	--pixel10: var(--gradMid);
+	--pixel11: var(--gradDark);
+	--pixel12: var(--gradDarkest);
+	--pixel13: var(--gradDarkest);
+	--pixel14: var(--gradDarkest);
+	--pixel15: var(--gradDarkest);
+	--pixel16: var(--gradDarkest);
 }
 .gradient-text.alt2
 {
-	--gradDark: var(--grad3Dark);
+	--gradDarkest: var(--grad3Darkest);
+    --gradDark: var(--grad3Dark);
 	--gradMid: var(--grad3Mid);
 	--gradLight: var(--grad3Light);
 	--gradLightest: var(--grad3Lightest);
+
+	--pixel1: var(--gradDarkest);
+	--pixel2: var(--gradDarkest);
+	--pixel3: var(--gradDark);
+	--pixel4: var(--gradDark);
+	--pixel5: var(--gradMid);
+	--pixel6: var(--gradLight);
+	--pixel7: var(--gradLightest);
+	--pixel8: var(--gradLightest);
+	--pixel9: var(--gradLight);
+	--pixel10: var(--gradMid);
+	--pixel11: var(--gradDark);
+	--pixel12: var(--gradDarkest);
+	--pixel13: var(--gradDarkest);
+	--pixel14: var(--gradDarkest);
+	--pixel15: var(--gradDarkest);
+	--pixel16: var(--gradDarkest);
 }
